@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+    <!--Style Sheets start-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--Style Sheets end-->
+</head>
+<body>
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+       <div class="container">
+           <div class="navbar-header">
+               <a href="#" class="navbar-brand">Tutor Harshan</a>
+           </div>
+       </div>
+   </nav>
+    <div class="container">
+       <div class="row">
+           <div class="col-lg-12">
+                <h2 class="page-header">Tutor Harshan Image Gallery</h2>
+            </div>
+            <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+               <div class="thumbnail">
+                   <img src="img/1_negombo.jpg" alt="" class="img-responsive">
+               </div>
+            </div>
+            <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+               <div class="thumbnail">
+                   <img src="img/2_fishing_vilage.jpg" alt="" class="img-responsive">
+               </div>
+            </div>
+            <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+               <div class="thumbnail">
+                   <img src="img/3_kalpitiya.jpg" alt="" class="img-responsive">
+               </div>
+            </div>
+            <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+               <div class="thumbnail">
+                   <img src="img/4_pasikuda.jpg" alt="" class="img-responsive">
+               </div>
+            </div>
+            <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+               <div class="thumbnail">
+                   <img src="img/5_leisure_pasikuda.jpg" alt="" class="img-responsive">
+               </div>
+            </div>
+            <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+               <div class="thumbnail">
+                   <img src="img/6_Arugam-Bay.jpg" alt="" class="img-responsive">
+               </div>
+            </div>
+            <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+               <div class="thumbnail">
+                   <img src="img/7_leisure_arugambay.jpg" alt="" class="img-responsive">
+               </div>
+            </div>
+            <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+               <div class="thumbnail">
+                   <img src="img/8_tangalle.jpg" alt="" class="img-responsive">
+               </div>
+            </div>
+            <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+               <div class="thumbnail">
+                   <img src="img/9_hummanaya.jpg" alt="" class="img-responsive">
+               </div>
+            </div>
+            <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+               <div class="thumbnail">
+                   <img src="img/10_galle.jpg" alt="" class="img-responsive">
+               </div>
+            </div>
+            <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+               <div class="thumbnail">
+                   <img src="img/11_airport.jpg" alt="" class="img-responsive">
+               </div>
+            </div>
+       </div>
+       <div class="modal fade" role="dialog" id="harsh">
+           <div class="modal-dialog">
+               <div class="modal-content">
+                   <div class="modal-body">
+                       <img src="" alt="" id="modal-img" height="100%" width="100%">
+                   </div>
+               </div>
+           </div>
+       </div>
+       <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Tutor Harshan</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        
+    <!--Scripts start-->
+    <script src="js/jquery-1.11.2.min.js"></script> <!--JQuery-->
+    <script src="js/bootstrap.min.js"></script> <!--Bootstrap js-->
+    <script src="js/jquery.flexslider-min.js"></script><!--JQuery Slider-->
+    <!--Scripts end-->
+    <script>
+        $(window).load(function(){
+//            alert("loaded");
+            $('img').on('click', function(){
+                var src=$(this).attr('src');
+//                alert(src);
+                $('#modal-img').attr('src', src);
+                $('#harsh').modal('show');
+            });
+            
+        });
+    </script>
+</body>
+</html>
